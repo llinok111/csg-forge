@@ -10,41 +10,57 @@ import { fileURLToPath } from 'node:url';
 
 const PORT = 5199;
 export const DEFAULT_URL = `http://localhost:${PORT}/workbench.html`;
-const CONFIG = fileURLToPath(new URL('../vite.config.js', import.meta.url));
+const CONFIG = fileURLToPath( new URL( '../vite.config.js', import.meta.url ) );
 
-async function reachable(url) {
-  try {
-    const res = await fetch(url, { method: 'GET' });
-    return res.ok || res.status === 304;
-  } catch {
-    return false;
-  }
+async function reachable( url ) {
+
+	try {
+
+		const res = await fetch( url, { method: 'GET' } );
+		return res.ok || res.status === 304;
+
+	} catch {
+
+		return false;
+
+	}
+
 }
 
-export async function ensureServer(url = DEFAULT_URL) {
-  if (await reachable(url)) {
-    return { url, server: null, owned: false };
-  }
+export async function ensureServer( url = DEFAULT_URL ) {
 
-  const server = await createServer({
-    configFile: CONFIG,
-    server: { port: PORT, strictPort: true }
-  });
-  await server.listen();
-  // Vite prints its own banner; keep the harness output readable.
-  server.printUrls = () => {};
+	if ( await reachable( url ) ) {
 
-  for (let i = 0; i < 40; i += 1) {
-    if (await reachable(url)) return { url, server, owned: true };
-    await new Promise((r) => setTimeout(r, 150));
-  }
+		return { url, server: null, owned: false };
 
-  await server.close();
-  throw new Error(`dev server did not become reachable at ${url}`);
+	}
+
+	const server = await createServer( {
+		configFile: CONFIG,
+		server: { port: PORT, strictPort: true }
+	} );
+	await server.listen();
+	// Vite prints its own banner; keep the harness output readable.
+	server.printUrls = () => {};
+
+	for ( let i = 0; i < 40; i += 1 ) {
+
+		if ( await reachable( url ) ) return { url, server, owned: true };
+		await new Promise( ( r ) => setTimeout( r, 150 ) );
+
+	}
+
+	await server.close();
+	throw new Error( `dev server did not become reachable at ${url}` );
+
 }
 
-export async function closeServer(handle) {
-  if (handle && handle.owned && handle.server) {
-    await handle.server.close();
-  }
+export async function closeServer( handle ) {
+
+	if ( handle && handle.owned && handle.server ) {
+
+		await handle.server.close();
+
+	}
+
 }

@@ -14,7 +14,7 @@
       "coolRatio": 0.0166,
       "meanLuma": 23.8,
       "dynamicRange": 221,
-      "paletteSize": 1085
+      "paletteSize": 1086
     },
     {
       "file": "02-viewport.png",
@@ -24,7 +24,7 @@
         13,
         16
       ],
-      "inkRatio": 0.1474,
+      "inkRatio": 0.1475,
       "warmRatio": 0.0602,
       "coolRatio": 0.0205,
       "meanLuma": 22.9,
@@ -44,7 +44,7 @@
       "coolRatio": 0.0205,
       "meanLuma": 22.9,
       "dynamicRange": 221,
-      "paletteSize": 339
+      "paletteSize": 340
     },
     {
       "file": "03-preset-1.png",
@@ -59,7 +59,7 @@
       "coolRatio": 0.074,
       "meanLuma": 23.7,
       "dynamicRange": 221,
-      "paletteSize": 553
+      "paletteSize": 550
     },
     {
       "file": "03-preset-2.png",
@@ -69,10 +69,10 @@
         13,
         16
       ],
-      "inkRatio": 0.1458,
+      "inkRatio": 0.1457,
       "warmRatio": 0.0726,
       "coolRatio": 0.006,
-      "meanLuma": 23.9,
+      "meanLuma": 23.8,
       "dynamicRange": 221,
       "paletteSize": 372
     },
@@ -89,7 +89,7 @@
       "coolRatio": 0.0097,
       "meanLuma": 15.7,
       "dynamicRange": 221,
-      "paletteSize": 856
+      "paletteSize": 853
     },
     {
       "file": "04-mode-xray.png",
@@ -104,7 +104,7 @@
       "coolRatio": 0.0062,
       "meanLuma": 15.8,
       "dynamicRange": 221,
-      "paletteSize": 283
+      "paletteSize": 281
     },
     {
       "file": "04-mode-solid.png",
@@ -114,12 +114,12 @@
         13,
         16
       ],
-      "inkRatio": 0.125,
+      "inkRatio": 0.1249,
       "warmRatio": 0.0479,
       "coolRatio": 0.0084,
       "meanLuma": 20.3,
       "dynamicRange": 221,
-      "paletteSize": 470
+      "paletteSize": 468
     },
     {
       "file": "05-section.png",
@@ -134,7 +134,7 @@
       "coolRatio": 0.0072,
       "meanLuma": 16.5,
       "dynamicRange": 221,
-      "paletteSize": 378
+      "paletteSize": 376
     },
     {
       "file": "06-tablet.png",
@@ -164,7 +164,7 @@
       "coolRatio": 0.0055,
       "meanLuma": 19.4,
       "dynamicRange": 222.8,
-      "paletteSize": 472
+      "paletteSize": 474
     },
     {
       "file": "08-phone.png",
@@ -174,7 +174,7 @@
         21,
         26
       ],
-      "inkRatio": 0.8079,
+      "inkRatio": 0.808,
       "warmRatio": 0.0643,
       "coolRatio": 0.0107,
       "meanLuma": 23.6,
@@ -258,17 +258,17 @@
       "original": "0.4",
       "changed": "1.15",
       "before": {
-        "totalMs": 29.5,
-        "resolveMs": 0,
-        "solveMs": 29.5,
+        "totalMs": 37,
+        "resolveMs": 0.20000000018626451,
+        "solveMs": 36.799999999813735,
         "evaluations": 1,
         "reusedStages": 4,
         "triangles": 1373
       },
       "after": {
-        "totalMs": 55.799999999813735,
-        "resolveMs": 0.2999999998137355,
-        "solveMs": 55.5,
+        "totalMs": 62.700000000186265,
+        "resolveMs": 0.20000000018626451,
+        "solveMs": 62.5,
         "evaluations": 4,
         "reusedStages": 1,
         "triangles": 1205
@@ -277,22 +277,22 @@
     "modes": {
       "wireframe": {
         "ink": 0.0993,
-        "palette": 856,
+        "palette": 853,
         "range": 221
       },
       "xray": {
         "ink": 0.1248,
-        "palette": 283,
+        "palette": 281,
         "range": 221
       },
       "solid": {
-        "ink": 0.125,
-        "palette": 470,
+        "ink": 0.1249,
+        "palette": 468,
         "range": 221
       }
     },
     "section": {
-      "before": 0.125,
+      "before": 0.1249,
       "after": 0.0801
     },
     "undo": {
@@ -303,19 +303,19 @@
     },
     "exports": {
       "glb": {
-        "name": "csg-model-20261022-1405.glb",
+        "name": "csg-model-20261022-1412.glb",
         "bytes": 65644
       },
       "stl": {
-        "name": "csg-model-20261022-1405.stl",
+        "name": "csg-model-20261022-1412.stl",
         "bytes": 29034
       },
       "obj": {
-        "name": "csg-model-20261022-1405.obj",
+        "name": "csg-model-20261022-1412.obj",
         "bytes": 206985
       },
       "json": {
-        "name": "csg-doc-20261022-1405.json",
+        "name": "csg-doc-20261022-1412.json",
         "bytes": 2968
       }
     },
@@ -341,7 +341,7 @@
         "w": 430,
         "h": 786
       },
-      "ink": 0.8079
+      "ink": 0.808
     },
     "mobileSheets": {
       "chain": {
@@ -435,13 +435,13 @@
     ],
     "hud": {
       "tris": "957",
-      "eval": "45.7 ms",
+      "eval": "45.8 ms",
       "mode": "worker ×1"
     },
     "stats": {
-      "totalMs": 45.700000000186265,
+      "totalMs": 45.799999999813735,
       "resolveMs": 0.900000000372529,
-      "solveMs": 44.799999999813735,
+      "solveMs": 44.89999999944121,
       "evaluations": 3,
       "reusedStages": 0,
       "triangles": 957
@@ -454,7 +454,7 @@
       0.8274
     ],
     "paletteRange": [
-      283,
+      281,
       1094
     ],
     "errors": [],

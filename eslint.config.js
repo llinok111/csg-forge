@@ -23,9 +23,10 @@ export default [
 	// base rules
 	{
 		name: 'base rules',
-		files: [ '**/*.js', '**/*.ts' ],
+		files: [ '**/*.js', '**/*.mjs', '**/*.ts' ],
 		languageOptions: {
-			ecmaVersion: 2020,
+			// 2022 so numeric separators (1_000) and top-level await are allowed.
+			ecmaVersion: 2022,
 			sourceType: 'module',
 			globals: {
 				...globals.browser,
@@ -35,6 +36,20 @@ export default [
 		rules: {
 			...mdcs.rules,
 			'no-mixed-spaces-and-tabs': 'error',
+		},
+	},
+
+	// ESM helper scripts use top-level await, which needs ES2022.
+	{
+		name: 'esm scripts',
+		files: [ '**/*.mjs' ],
+		languageOptions: {
+			ecmaVersion: 2022,
+			sourceType: 'module',
+			globals: {
+				...globals.browser,
+				...globals.node,
+			},
 		},
 	},
 

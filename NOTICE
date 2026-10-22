@@ -68,7 +68,10 @@ Files modified in upstream code
                                    (verification harness only) and scripts:
                                    probe / verify / bench
   .gitignore                       ignores the local .npmrc registry override
-  eslint.config.js                 one rule relaxation for the worker scripts
+  eslint.config.js                 ignores examples/bundle; lints *.mjs (the
+                                   verification scripts); raises ecmaVersion to
+                                   2022 so numeric separators and top-level await
+                                   parse
 
 Nothing under src/core, src/objects, src/materials, src/utils, src/libs was
 touched. The upstream Evaluator runs unmodified inside the worker.
