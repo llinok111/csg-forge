@@ -105,4 +105,8 @@ dist
 
 .parcel-cache
 examples/dev-bundle
+examples/bundle
 build
+
+# local registry override (do not publish)
+.npmrc

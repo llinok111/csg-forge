@@ -1,0 +1,91 @@
+CSG Forge
+=========
+
+A derivative work of three-bvh-csg.
+
+Upstream project
+----------------
+  three-bvh-csg
+  https://github.com/gkjohnson/three-bvh-csg
+  Copyright (c) 2022 Garrett Johnson
+  Licensed under the MIT License (see LICENSE, kept verbatim)
+
+Upstream commit this fork is based on
+-------------------------------------
+  branch: main
+  package version: 0.0.18
+  full history retained, see `git log`
+
+What upstream left open
+-----------------------
+The upstream README lists "Worker Support" (#14) under "Roadmap / Help Wanted",
+and `IMPLEMENTATION.md` describes `src/workers/*` as "Currently unused". The two
+files that existed there were non-functional stubs. This fork implements that
+roadmap item and builds a workbench on top of it.
+
+Files added by this fork
+------------------------
+All new files are MIT, Copyright (c) 2026 the CSG Forge authors.
+
+  src/workers/protocol.js          wire protocol: brush descriptors, transfer
+                                   lists, FNV-1a fingerprints, serialize /
+                                   deserialize round trip
+  src/workers/csg.worker.js        module worker: hosts the untouched upstream
+                                   Evaluator, prefix-cache aware chain evaluation,
+                                   plus CPU / solve probes for benchmarking
+  src/workers/Pool.js              worker pool: task queue, per-worker state,
+                                   abort signals, idle recycling, teardown
+  src/workers/AsyncEvaluator.js    Promise-based counterpart to Evaluator with
+                                   evaluateChain() prefix caching and a
+                                   synchronous fallback when Worker is absent
+
+  examples/workbench.html          workbench shell
+  examples/workbench/workbench.css workbench chrome (dark industrial, amber accent)
+  examples/workbench/main.js       wiring: document, history, UI, evaluation loop
+  examples/workbench/graph.js      node model, primitives, presets, BrushStore, History
+  examples/workbench/viewport.js   three.js scene, section plane, display modes, fps meter
+  examples/workbench/exporter.js   glTF / STL / OBJ export
+  examples/workbench/bench.js      main-thread vs worker benchmark harness
+
+  tests/Workers.protocol.test.js   13 tests
+  tests/Workers.Pool.test.js       10 tests
+  tests/Workers.AsyncEvaluator.test.js 11 tests
+
+  scripts/probe.mjs                smoke probe (DOM + canvas pixel stats)
+  scripts/verify.mjs               full verification harness
+  scripts/run-bench.mjs            benchmark runner, writes docs/shots/bench.json
+
+  docs/shots/*                     verification screenshots and reports
+  UPSTREAM.md                      change log against upstream
+  README.md                        rewritten (upstream README preserved as
+                                   README.upstream.md)
+
+Files modified in upstream code
+-------------------------------
+  src/workers/AsyncEvaluator.js    replaced the stub with the implementation
+  src/workers/Pool.js              replaced the stub with the implementation
+  package.json                     added devDependencies: playwright-core, pngjs
+                                   (verification harness only) and scripts:
+                                   probe / verify / bench
+  .gitignore                       ignores the local .npmrc registry override
+  eslint.config.js                 one rule relaxation for the worker scripts
+
+Nothing under src/core, src/objects, src/materials, src/utils, src/libs was
+touched. The upstream Evaluator runs unmodified inside the worker.
+
+Trademarks and affiliation
+--------------------------
+This is not an official fork of three-bvh-csg. It is not endorsed by, affiliated
+with, or sponsored by the upstream author. The upstream name appears only to
+identify the project this work derives from.
+
+Third-party runtime dependencies carried over from upstream
+-----------------------------------------------------------
+  three            MIT
+  three-mesh-bvh   MIT
+  cdt2d            MIT
+
+Third-party build/test dependencies added by this fork
+------------------------------------------------------
+  playwright-core  Apache-2.0
+  pngjs            MIT

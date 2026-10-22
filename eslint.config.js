@@ -13,6 +13,7 @@ export default [
 			'**/node_modules/**',
 			'**/build/**',
 			'**/src/libs/**',
+			'**/examples/bundle/**',
 		],
 	},
 

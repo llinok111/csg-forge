@@ -1,0 +1,463 @@
+{
+  "url": "http://localhost:5199/workbench.html",
+  "shots": [
+    {
+      "file": "01-initial.png",
+      "size": "1600x1000",
+      "background": [
+        19,
+        22,
+        28
+      ],
+      "inkRatio": 0.5963,
+      "warmRatio": 0.0449,
+      "coolRatio": 0.0166,
+      "meanLuma": 23.8,
+      "dynamicRange": 221,
+      "paletteSize": 1085
+    },
+    {
+      "file": "02-viewport.png",
+      "size": "1064x946",
+      "background": [
+        11,
+        13,
+        16
+      ],
+      "inkRatio": 0.1474,
+      "warmRatio": 0.0602,
+      "coolRatio": 0.0205,
+      "meanLuma": 22.9,
+      "dynamicRange": 221,
+      "paletteSize": 338
+    },
+    {
+      "file": "03-preset-0.png",
+      "size": "1064x946",
+      "background": [
+        11,
+        13,
+        16
+      ],
+      "inkRatio": 0.1475,
+      "warmRatio": 0.0602,
+      "coolRatio": 0.0205,
+      "meanLuma": 22.9,
+      "dynamicRange": 221,
+      "paletteSize": 339
+    },
+    {
+      "file": "03-preset-1.png",
+      "size": "1064x946",
+      "background": [
+        11,
+        13,
+        16
+      ],
+      "inkRatio": 0.156,
+      "warmRatio": 0.0227,
+      "coolRatio": 0.074,
+      "meanLuma": 23.7,
+      "dynamicRange": 221,
+      "paletteSize": 553
+    },
+    {
+      "file": "03-preset-2.png",
+      "size": "1064x946",
+      "background": [
+        11,
+        13,
+        16
+      ],
+      "inkRatio": 0.1458,
+      "warmRatio": 0.0726,
+      "coolRatio": 0.006,
+      "meanLuma": 23.9,
+      "dynamicRange": 221,
+      "paletteSize": 372
+    },
+    {
+      "file": "04-mode-wireframe.png",
+      "size": "1064x946",
+      "background": [
+        11,
+        13,
+        16
+      ],
+      "inkRatio": 0.0993,
+      "warmRatio": 0.0138,
+      "coolRatio": 0.0097,
+      "meanLuma": 15.7,
+      "dynamicRange": 221,
+      "paletteSize": 856
+    },
+    {
+      "file": "04-mode-xray.png",
+      "size": "1064x946",
+      "background": [
+        11,
+        13,
+        16
+      ],
+      "inkRatio": 0.1248,
+      "warmRatio": 0.0395,
+      "coolRatio": 0.0062,
+      "meanLuma": 15.8,
+      "dynamicRange": 221,
+      "paletteSize": 283
+    },
+    {
+      "file": "04-mode-solid.png",
+      "size": "1064x946",
+      "background": [
+        11,
+        13,
+        16
+      ],
+      "inkRatio": 0.125,
+      "warmRatio": 0.0479,
+      "coolRatio": 0.0084,
+      "meanLuma": 20.3,
+      "dynamicRange": 221,
+      "paletteSize": 470
+    },
+    {
+      "file": "05-section.png",
+      "size": "1064x946",
+      "background": [
+        11,
+        13,
+        16
+      ],
+      "inkRatio": 0.0801,
+      "warmRatio": 0.0169,
+      "coolRatio": 0.0072,
+      "meanLuma": 16.5,
+      "dynamicRange": 221,
+      "paletteSize": 378
+    },
+    {
+      "file": "06-tablet.png",
+      "size": "1100x820",
+      "background": [
+        19,
+        22,
+        28
+      ],
+      "inkRatio": 0.4998,
+      "warmRatio": 0.0352,
+      "coolRatio": 0.0103,
+      "meanLuma": 23.6,
+      "dynamicRange": 221,
+      "paletteSize": 1094
+    },
+    {
+      "file": "07-narrow.png",
+      "size": "860x900",
+      "background": [
+        18,
+        21,
+        26
+      ],
+      "inkRatio": 0.8274,
+      "warmRatio": 0.0345,
+      "coolRatio": 0.0055,
+      "meanLuma": 19.4,
+      "dynamicRange": 222.8,
+      "paletteSize": 472
+    },
+    {
+      "file": "08-phone.png",
+      "size": "430x880",
+      "background": [
+        18,
+        21,
+        26
+      ],
+      "inkRatio": 0.8079,
+      "warmRatio": 0.0643,
+      "coolRatio": 0.0107,
+      "meanLuma": 23.6,
+      "dynamicRange": 222.8,
+      "paletteSize": 482
+    },
+    {
+      "file": "09-phone-sheet.png",
+      "size": "430x880",
+      "background": [
+        18,
+        21,
+        26
+      ],
+      "inkRatio": 0.8079,
+      "warmRatio": 0.0643,
+      "coolRatio": 0.0107,
+      "meanLuma": 23.6,
+      "dynamicRange": 222.8,
+      "paletteSize": 482
+    }
+  ],
+  "interactions": {
+    "presets": [
+      {
+        "index": 0,
+        "name": "Mounting Bracket",
+        "nodes": 4,
+        "kinds": [
+          "box",
+          "cylinder",
+          "cylinder",
+          "box"
+        ],
+        "tris": 957
+      },
+      {
+        "index": 1,
+        "name": "Vented Cube",
+        "nodes": 4,
+        "kinds": [
+          "box",
+          "sphere",
+          "cylinder",
+          "torus"
+        ],
+        "tris": 1898
+      },
+      {
+        "index": 2,
+        "name": "Gear Blank",
+        "nodes": 13,
+        "kinds": [
+          "cylinder",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "cylinder",
+          "cylinder"
+        ],
+        "tris": 2012
+      }
+    ],
+    "addPrimitive": {
+      "before": 4,
+      "after": 5
+    },
+    "inspector": {
+      "kind": "Cylinder",
+      "fields": 10,
+      "selected": "node-27"
+    },
+    "paramEdit": {
+      "original": "0.4",
+      "changed": "1.15",
+      "before": {
+        "totalMs": 29.5,
+        "resolveMs": 0,
+        "solveMs": 29.5,
+        "evaluations": 1,
+        "reusedStages": 4,
+        "triangles": 1373
+      },
+      "after": {
+        "totalMs": 55.799999999813735,
+        "resolveMs": 0.2999999998137355,
+        "solveMs": 55.5,
+        "evaluations": 4,
+        "reusedStages": 1,
+        "triangles": 1205
+      }
+    },
+    "modes": {
+      "wireframe": {
+        "ink": 0.0993,
+        "palette": 856,
+        "range": 221
+      },
+      "xray": {
+        "ink": 0.1248,
+        "palette": 283,
+        "range": 221
+      },
+      "solid": {
+        "ink": 0.125,
+        "palette": 470,
+        "range": 221
+      }
+    },
+    "section": {
+      "before": 0.125,
+      "after": 0.0801
+    },
+    "undo": {
+      "before": 5,
+      "added": 6,
+      "undone": 5,
+      "redone": 6
+    },
+    "exports": {
+      "glb": {
+        "name": "csg-model-20261022-1405.glb",
+        "bytes": 65644
+      },
+      "stl": {
+        "name": "csg-model-20261022-1405.stl",
+        "bytes": 29034
+      },
+      "obj": {
+        "name": "csg-model-20261022-1405.obj",
+        "bytes": 206985
+      },
+      "json": {
+        "name": "csg-doc-20261022-1405.json",
+        "bytes": 2968
+      }
+    },
+    "06-tablet": {
+      "overflow": false,
+      "canvas": {
+        "w": 628,
+        "h": 766
+      },
+      "ink": 0.4998
+    },
+    "07-narrow": {
+      "overflow": false,
+      "canvas": {
+        "w": 860,
+        "h": 806
+      },
+      "ink": 0.8274
+    },
+    "08-phone": {
+      "overflow": false,
+      "canvas": {
+        "w": 430,
+        "h": 786
+      },
+      "ink": 0.8079
+    },
+    "mobileSheets": {
+      "chain": {
+        "chain": true,
+        "inspector": false,
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ]
+      },
+      "inspector": {
+        "chain": false,
+        "inspector": true,
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ]
+      },
+      "none": {
+        "chain": false,
+        "inspector": false,
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ]
+      }
+    }
+  },
+  "errors": [],
+  "failed": [],
+  "dom": {
+    "viewport": {
+      "w": 1600,
+      "h": 1000
+    },
+    "regions": {
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "w": 1600,
+        "h": 54
+      },
+      "chain": {
+        "x": 0,
+        "y": 54,
+        "w": 268,
+        "h": 946
+      },
+      "viewport": {
+        "x": 268,
+        "y": 54,
+        "w": 1064,
+        "h": 946
+      },
+      "inspector": {
+        "x": 1332,
+        "y": 54,
+        "w": 268,
+        "h": 946
+      }
+    },
+    "outside": [],
+    "overflowX": false,
+    "canvas": {
+      "css": {
+        "x": 268,
+        "y": 54,
+        "w": 1064,
+        "h": 946
+      },
+      "buffer": [
+        1064,
+        946
+      ]
+    },
+    "nodeRows": 4,
+    "addButtons": [
+      "▣BOX",
+      "●SPH",
+      "⬭CYL",
+      "▲CONE",
+      "◎TOR"
+    ],
+    "presets": [
+      "Mounting Bracket",
+      "Vented Cube",
+      "Gear Blank"
+    ],
+    "hud": {
+      "tris": "957",
+      "eval": "45.7 ms",
+      "mode": "worker ×1"
+    },
+    "stats": {
+      "totalMs": 45.700000000186265,
+      "resolveMs": 0.900000000372529,
+      "solveMs": 44.799999999813735,
+      "evaluations": 3,
+      "reusedStages": 0,
+      "triangles": 957
+    }
+  },
+  "summary": {
+    "shots": 13,
+    "inkRange": [
+      0.0801,
+      0.8274
+    ],
+    "paletteRange": [
+      283,
+      1094
+    ],
+    "errors": [],
+    "failed": []
+  }
+}
