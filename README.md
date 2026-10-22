@@ -124,6 +124,8 @@ const { brush, stats } = await evaluator.evaluateChain(nodes);
 - **阻塞帧 0 vs 2** 是用户真正能感知的差别。主线程模式下 12 帧里有 2 帧被 30ms 级的求解卡住，交互会掉帧；worker 模式下 16 帧一次都没卡。
 - **199ms 启动开销**是一次性的，只在第一次求值时支付。
 
+**关于 fps 的对照**：上面所有帧数据都来自 headless + SwiftShader 软渲染。同一份构建部署到 Pages 后，在同一台机器的 Edge（硬件加速）里跑，HUD 显示 **73 fps**；headless 环境只有 3–8 fps。这个 10 倍差距全部来自渲染后端，与 CSG 求值无关 —— 所以 README 里没有任何一条结论建立在 headless 的 fps 绝对值上。
+
 > 这些数字**没有取最好值**。冷路径对 worker 不利的结论、启动开销、以及"热路径优势来自缓存而非并发"这三点都写在上面。
 
 ## 4. 快速开始

@@ -66,6 +66,7 @@ const evaluator = new AsyncEvaluator( {
 let selectedId = doc.nodes[ 0 ].id;
 let controller = null;
 let scheduled = false;
+let inflight = 0;
 let lastStats = null;
 let firstFrameDone = false;
 let evalSeq = 0;
@@ -105,6 +106,7 @@ function scheduleEvaluate() {
 
 async function runEvaluate() {
 
+	inflight ++;
 	if ( controller ) controller.abort();
 	const mine = new AbortController();
 	controller = mine;
@@ -141,6 +143,7 @@ async function runEvaluate() {
 
 	} finally {
 
+		inflight --;
 		if ( controller === mine ) {
 
 			controller = null;
@@ -833,6 +836,10 @@ window.__csgForge = {
 	},
 	getSelected: () => selectedId,
 	getEvalSeq: () => evalSeq,
+	// Exact evaluation activity: `scheduled` covers the rAF window before a run
+	// starts, `inflight` covers the run itself. Together they make "is the
+	// workbench settled?" answerable without guessing.
+	getActivity: () => ( { scheduled, inflight, pending: evaluator.pending } ),
 	whenIdle: () => evaluator.whenIdle(),
 	whenReady: () => evaluator.whenReady(),
 };
